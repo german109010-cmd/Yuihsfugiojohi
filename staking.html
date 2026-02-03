@@ -1,0 +1,148 @@
+<div id="page">
+<div id="staking-screen" class="screen">
+    <div class="staking-header">
+        <div class="staking-title">Staking Vault</div>
+        <div class="staking-subtitle">Stake your tokens and earn passive income</div>
+    </div>
+
+    <div class="staking-card">
+        <div class="staking-balance">
+            <h3>Available for staking</h3>
+            <h2 id="stakingBalance">0</h2>
+        </div>
+
+        <div class="staking-info">
+            <div class="staking-stat">
+                <div class="staking-stat-label">APY</div>
+                <div class="staking-stat-value green" id="currentAPY">12%</div>
+            </div>
+            <div class="staking-stat">
+                <div class="staking-stat-label">Staked</div>
+                <div class="staking-stat-value" id="stakedAmount">0</div>
+            </div>
+            <div class="staking-stat">
+                <div class="staking-stat-label">Rewards</div>
+                <div class="staking-stat-value" id="stakingRewards">0</div>
+            </div>
+            <div class="staking-stat">
+                <div class="staking-stat-label">Total Earned</div>
+                <div class="staking-stat-value" id="totalStakingEarned">0</div>
+            </div>
+        </div>
+
+        <div class="staking-actions">
+            <button class="staking-btn" id="stakeBtn">Stake</button>
+            <button class="staking-btn outline" id="unstakeBtn">Unstake</button>
+        </div>
+    </div>
+
+    <div class="staking-plans">
+        <div class="staking-plan">
+            <div class="plan-header">
+                <div class="plan-name">30 Days</div>
+                <div class="plan-apy">15% APY</div>
+            </div>
+            <div class="plan-details">
+                <div class="plan-detail">
+                    <div class="plan-detail-label">Min stake</div>
+                    <div class="plan-detail-value">100 Vault</div>
+                </div>
+                <div class="plan-detail">
+                    <div class="plan-detail-label">Lock period</div>
+                    <div class="plan-detail-value">30 days</div>
+                </div>
+                <div class="plan-detail">
+                    <div class="plan-detail-label">Early unstake fee</div>
+                    <div class="plan-detail-value">5%</div>
+                </div>
+            </div>
+            <div class="plan-actions">
+                <button class="plan-btn primary" data-plan="30">Stake</button>
+                <button class="plan-btn secondary" data-info="30">Details</button>
+            </div>
+        </div>
+
+        <div class="staking-plan">
+            <div class="plan-header">
+                <div class="plan-name">90 Days</div>
+                <div class="plan-apy">25% APY</div>
+            </div>
+            <div class="plan-details">
+                <div class="plan-detail">
+                    <div class="plan-detail-label">Min stake</div>
+                    <div class="plan-detail-value">500 Vault</div>
+                </div>
+                <div class="plan-detail">
+                    <div class="plan-detail-label">Lock period</div>
+                    <div class="plan-detail-value">90 days</div>
+                </div>
+                <div class="plan-detail">
+                    <div class="plan-detail-label">Early unstake fee</div>
+                    <div class="plan-detail-value">10%</div>
+                </div>
+            </div>
+            <div class="plan-actions">
+                <button class="plan-btn primary" data-plan="90">Stake</button>
+                <button class="plan-btn secondary" data-info="90">Details</button>
+            </div>
+        </div>
+
+        <div class="staking-plan">
+            <div class="plan-header">
+                <div class="plan-name">180 Days</div>
+                <div class="plan-apy">40% APY</div>
+            </div>
+            <div class="plan-details">
+                <div class="plan-detail">
+                    <div class="plan-detail-label">Min stake</div>
+                    <div class="plan-detail-value">1000 Vault</div>
+                </div>
+                <div class="plan-detail">
+                    <div class="plan-detail-label">Lock period</div>
+                    <div class="plan-detail-value">180 days</div>
+                </div>
+                <div class="plan-detail">
+                    <div class="plan-detail-label">Early unstake fee</div>
+                    <div class="plan-detail-value">15%</div>
+                </div>
+            </div>
+            <div class="plan-actions">
+                <button class="plan-btn primary" data-plan="180">Stake</button>
+                <button class="plan-btn secondary" data-info="180">Details</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bottom" id="bottomNav">
+    <button class="nav active" data-nav="wallet">
+        <div class="nav-icon">
+            <i class="fas fa-wallet"></i>
+        </div>
+        <span>Wallet</span>
+    </button>
+    <button class="nav" data-nav="airdrop">
+        <div class="nav-icon">
+            <i class="fas fa-gift"></i>
+        </div>
+        <span>Airdrops</span>
+    </button>
+    <button class="nav" data-nav="staking">
+        <div class="nav-icon">
+            <i class="fas fa-chart-line"></i>
+        </div>
+        <span>Staking</span>
+    </button>
+    <button class="nav" data-nav="p2p">
+        <div class="nav-icon">
+            <i class="fas fa-exchange-alt"></i>
+        </div>
+        <span>P2P</span>
+    </button>
+    <button class="nav" data-nav="profile">
+        <div class="nav-icon">
+            <i class="fas fa-user"></i>
+        </div>
+        <span>Profile</span>
+    </button>
+</div>
+</div>

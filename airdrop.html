@@ -1,0 +1,70 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><div id="page">
+    <div id="airdrop-screen" class="screen">
+        <div class="airdrop-header">
+            <div class="airdrop-title">Airdrops & Tasks</div>
+            <div class="airdrop-subtitle">Complete tasks and earn Vault tokens</div>
+        </div>
+
+        <div class="daily-counter" id="dailyCounter">
+            <i class="fas fa-bolt" style="color: var(--yellow); margin-right: 8px;"></i>
+            <strong>Daily Airdrop:</strong> <span id="dailyCount">0/1000</span> users claimed today
+        </div>
+
+        <div class="active-airdrop">
+            <div class="airdrop-reward" id="dailyReward">500 Vault</div>
+            <div class="airdrop-description">
+                Daily airdrop for first 1000 users (resets at 00:00 NY time)
+            </div>
+            <button class="claim-btn" id="claimDailyBtn">Claim Daily Airdrop</button>
+        </div>
+
+        <div class="tasks-list">
+            <!-- Task items остаются без изменений -->
+            <div class="task-item">
+                <div class="task-checkbox" id="task1Checkbox">
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="task-info">
+                    <div class="task-name">Follow Telegram Channel</div>
+                    <div class="task-reward">+250 Vault</div>
+                </div>
+                <button class="task-connect telegram-task-btn" id="task1Btn">Join @VaultWalletOfficial</button>
+            </div>
+            <!-- ... остальные task items ... -->
+        </div>
+    </div>
+    
+    <div class="bottom" id="bottomNav">
+        <!-- Навигация остается без изменений -->
+        <button class="nav" data-nav="wallet">
+            <div class="nav-icon">
+                <i class="fas fa-wallet"></i>
+            </div>
+            <span>Wallet</span>
+        </button>
+        <button class="nav active" data-nav="airdrop">
+            <div class="nav-icon">
+                <i class="fas fa-gift"></i>
+            </div>
+            <span>Airdrops</span>
+        </button>
+        <button class="nav" data-nav="staking">
+            <div class="nav-icon">
+                <i class="fas fa-chart-line"></i>
+            </div>
+            <span>Staking</span>
+        </button>
+        <button class="nav" data-nav="p2p">
+            <div class="nav-icon">
+                <i class="fas fa-exchange-alt"></i>
+            </div>
+            <span>P2P</span>
+        </button>
+        <button class="nav" data-nav="profile">
+            <div class="nav-icon">
+                <i class="fas fa-user"></i>
+            </div>
+            <span>Profile</span>
+        </button>
+    </div>
+</div>

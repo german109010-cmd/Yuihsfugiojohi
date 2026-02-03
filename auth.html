@@ -1,0 +1,102 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><div id="page">
+    <div id="auth" class="screen active">
+        <div class="auth-screen">
+            <h2 class="auth-title">Welcome to Vault</h2>
+            
+            <div id="authMessage" class="auth-message"></div>
+            
+            <!-- Tabs for Login/Register -->
+            <div class="auth-tabs">
+                <div class="auth-tab active" id="loginTab" onclick="Auth.showLoginForm()">Login</div>
+                <div class="auth-tab" id="registerTab" onclick="Auth.showRegisterForm()">Register</div>
+            </div>
+            
+            <!-- Login Form -->
+            <div id="loginForm">
+                <input type="email" id="loginEmail" class="auth-input" placeholder="Email">
+                <input type="password" id="loginPassword" class="auth-input" placeholder="Password">
+                <input type="text" id="loginSecret" class="auth-input" placeholder="Secret Word">
+                
+                <button onclick="Auth.loginUser()" id="loginBtn" class="auth-btn">
+                    <span id="loginBtnText">Login</span>
+                    <div id="loginBtnLoader" class="loader" style="display:none;"></div>
+                </button>
+                
+                <a href="#" class="auth-link" onclick="Auth.showForgotPassword()">Forgot password?</a>
+                <a href="#" class="auth-link" onclick="Auth.showRegisterForm()">Don't have an account? Register</a>
+            </div>
+            
+            <!-- Registration Form -->
+            <div id="registerForm" style="display:none;">
+                <!-- Шаги процесса -->
+                <div class="steps">
+                    <div class="step active" id="step1">
+                        <div class="step-circle">1</div>
+                        <div class="step-label">Register</div>
+                    </div>
+                    <div class="step" id="step2">
+                        <div class="step-circle">2</div>
+                        <div class="step-label">Verify Email</div>
+                    </div>
+                    <div class="step" id="step3">
+                        <div class="step-circle">3</div>
+                        <div class="step-label">Complete</div>
+                    </div>
+                </div>
+                
+                <input type="email" id="email" class="auth-input" placeholder="Email" required>
+                <input type="password" id="password" class="auth-input" placeholder="Password (min 6 characters)" minlength="6" required>
+                <input type="text" id="secretWord" class="auth-input" placeholder="Secret Word (remember it!)" required>
+                <div class="secret-note">Remember this word! You'll need it to login.</div>
+                
+                <button onclick="Auth.registerUser()" id="registerBtn" class="auth-btn">
+                    <span id="btnText">Register</span>
+                    <div id="btnLoader" class="loader" style="display:none;"></div>
+                </button>
+                
+                <a href="#" class="auth-link" onclick="Auth.showLoginForm()">Already have an account? Login</a>
+            </div>
+            
+            <!-- Forgot Password Form -->
+            <div id="forgotPasswordForm" style="display:none;">
+                <h3>Reset Password</h3>
+                <p style="color:var(--text-secondary); margin-bottom:20px;">Enter your email to receive a password reset link.</p>
+                
+                <input type="email" id="resetEmail" class="auth-input" placeholder="Email">
+                
+                <button onclick="Auth.resetPassword()" id="resetBtn" class="auth-btn">
+                    <span id="resetBtnText">Send Reset Link</span>
+                    <div id="resetBtnLoader" class="loader" style="display:none;"></div>
+                </button>
+                
+                <a href="#" class="auth-link" onclick="Auth.showLoginForm()">Back to Login</a>
+            </div>
+            
+            <!-- Информация о пользователе -->
+            <div id="userInfo" style="display:none;">
+                <div class="user-info">
+                    <div><strong>Email:</strong> <span id="userEmail"></span></div>
+                    <div style="margin-top:10px; margin-bottom:20px;"><strong>Status:</strong> 
+                        <span id="emailStatus" class="status-badge status-not-verified">Not Verified</span>
+                    </div>
+                    
+                    <div style="margin-top:20px;">
+                        <p style="color:var(--text-secondary); margin-bottom:16px; font-size:14px;">We've sent a verification link to your email.</p>
+                        <div class="buttons-container">
+                            <button onclick="Auth.sendVerificationEmail()" id="resendBtn" class="resend-btn">
+                                Resend Email
+                            </button>
+                            <button onclick="Auth.checkEmailVerification()" id="checkBtn" class="resend-btn">
+                                Check Verification
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <button onclick="Auth.continueToApp()" id="continueBtn" class="auth-btn" style="display:none;">
+                    Continue to App
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

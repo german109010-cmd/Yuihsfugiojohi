@@ -1,0 +1,116 @@
+<div id="page">
+<div id="wallet-screen" class="screen">
+    <div class="header">
+        <div class="logo">Vault</div>
+        <div class="header-actions">
+            <button class="icon-btn" id="scanBtn">
+                <i class="fas fa-qrcode"></i>
+            </button>
+            <button class="icon-btn" id="refreshBtn">
+                <i class="fas fa-sync-alt"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="card balance">
+        <div class="balance-title">Your Balance</div>
+        <h1 id="balanceAmount">0.00</h1>
+        <div class="balance-change" id="balanceChange">Start earning Vault tokens!</div>
+    </div>
+
+    <div class="quick-actions">
+        <button class="action-btn" id="sendBtn">
+            <div class="action-icon">
+                <i class="fas fa-paper-plane"></i>
+            </div>
+            <div class="action-text">Send</div>
+        </button>
+        <button class="action-btn" id="receiveBtn">
+            <div class="action-icon">
+                <i class="fas fa-qrcode"></i>
+            </div>
+            <div class="action-text">Receive</div>
+        </button>
+        <button class="action-btn" id="depositBtn">
+            <div class="action-icon">
+                <i class="fas fa-wallet"></i>
+            </div>
+            <div class="action-text">Deposit USDT</div>
+        </button>
+    </div>
+
+    <div class="card">
+        <div class="token-header">
+            <div class="token-icon">V</div>
+            <div class="token-info">
+                <h3>Vault Token</h3>
+                <p>Main asset - Earn from airdrops & tasks</p>
+            </div>
+        </div>
+        <div class="token-stats">
+            <div class="stat-item">
+                <div class="stat-label">Your balance</div>
+                <div class="stat-value" id="tokenBalance">0</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-label">Total earned</div>
+                <div class="stat-value" id="totalEarned">0</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-label">Transfer fee</div>
+                <div class="stat-value">0.5%</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-label">Status</div>
+                <div class="stat-value" style="color: #34C759;">Active</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="transactions-section">
+        <div class="section-title">
+            <span>Recent transactions</span>
+            <button class="task-connect" id="clearTransactions" style="display: none;">Clear all</button>
+        </div>
+        <div class="transactions-list" id="transactionsList">
+            <div class="empty-transactions" id="emptyTransactions">
+                <i class="fas fa-exchange-alt" style="font-size: 32px; margin-bottom: 12px; opacity: 0.5;"></i>
+                <div>No transactions yet</div>
+                <div style="font-size: 12px; margin-top: 8px;">Complete tasks or receive transfers to see history</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bottom" id="bottomNav">
+    <button class="nav active" data-nav="wallet">
+        <div class="nav-icon">
+            <i class="fas fa-wallet"></i>
+        </div>
+        <span>Wallet</span>
+    </button>
+    <button class="nav" data-nav="airdrop">
+        <div class="nav-icon">
+            <i class="fas fa-gift"></i>
+        </div>
+        <span>Airdrops</span>
+    </button>
+    <button class="nav" data-nav="staking">
+        <div class="nav-icon">
+            <i class="fas fa-chart-line"></i>
+        </div>
+        <span>Staking</span>
+    </button>
+    <button class="nav" data-nav="p2p">
+        <div class="nav-icon">
+            <i class="fas fa-exchange-alt"></i>
+        </div>
+        <span>P2P</span>
+    </button>
+    <button class="nav" data-nav="profile">
+        <div class="nav-icon">
+            <i class="fas fa-user"></i>
+        </div>
+        <span>Profile</span>
+    </button>
+</div>
+</div>

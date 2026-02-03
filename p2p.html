@@ -1,0 +1,59 @@
+<div id="page">
+<div id="p2p-screen" class="screen">
+    <div class="p2p-header">
+        <div class="p2p-title">P2P Exchange</div>
+        <div class="p2p-subtitle">Trade Vault tokens with other users securely</div>
+    </div>
+
+    <div class="p2p-tabs">
+        <div class="p2p-tab active" id="buyTab" onclick="P2P.showTab('buy')">Buy Vault</div>
+        <div class="p2p-tab" id="sellTab" onclick="P2P.showTab('sell')">Sell Vault</div>
+        <div class="p2p-tab" id="myTradesTab" onclick="P2P.showTab('myTrades')">My Trades</div>
+    </div>
+
+    <button class="p2p-create-btn" id="createOfferBtn">
+        <i class="fas fa-plus"></i> Create Offer
+    </button>
+
+    <div class="p2p-offers" id="offersList">
+        <!-- Offers will be loaded here -->
+        <div class="empty-transactions">
+            <i class="fas fa-exchange-alt" style="font-size: 32px; margin-bottom: 12px; opacity: 0.5;"></i>
+            <div>No active offers</div>
+            <div style="font-size: 12px; margin-top: 8px;">Create your first offer to start trading</div>
+        </div>
+    </div>
+</div>
+<div class="bottom" id="bottomNav">
+    <button class="nav active" data-nav="wallet">
+        <div class="nav-icon">
+            <i class="fas fa-wallet"></i>
+        </div>
+        <span>Wallet</span>
+    </button>
+    <button class="nav" data-nav="airdrop">
+        <div class="nav-icon">
+            <i class="fas fa-gift"></i>
+        </div>
+        <span>Airdrops</span>
+    </button>
+    <button class="nav" data-nav="staking">
+        <div class="nav-icon">
+            <i class="fas fa-chart-line"></i>
+        </div>
+        <span>Staking</span>
+    </button>
+    <button class="nav" data-nav="p2p">
+        <div class="nav-icon">
+            <i class="fas fa-exchange-alt"></i>
+        </div>
+        <span>P2P</span>
+    </button>
+    <button class="nav" data-nav="profile">
+        <div class="nav-icon">
+            <i class="fas fa-user"></i>
+        </div>
+        <span>Profile</span>
+    </button>
+</div>
+</div>

@@ -1,0 +1,102 @@
+<div id="page">
+<div id="profile-screen" class="screen">
+    <div class="profile-header">
+        <div class="profile-avatar">
+            <i class="fas fa-user"></i>
+        </div>
+        <div class="profile-name" id="profileName">User</div>
+        <div class="profile-status">Basic Level</div>
+        <div class="wallet-address" id="userAddress">0x8a2f...c3d4</div>
+    </div>
+
+    <div class="menu-section">
+        <div class="section-title">Assets</div>
+        <div class="menu-grid">
+            <button class="menu-item" id="usdtBalanceBtn">
+                <div class="menu-icon">
+                    <i class="fab fa-usd usdt-icon"></i>
+                </div>
+                <div class="menu-text">USDT Balance</div>
+            </button>
+            <button class="menu-item" id="vaultStatsBtn">
+                <div class="menu-icon">
+                    <div class="token-icon" style="width: 24px; height: 24px; border-radius: 8px; font-size: 14px;">V</div>
+                </div>
+                <div class="menu-text">Vault Stats</div>
+            </button>
+            <button class="menu-item" id="rewardsBtn">
+                <div class="menu-icon">
+                    <i class="fas fa-gift"></i>
+                </div>
+                <div class="menu-text">My Rewards</div>
+            </button>
+            <button class="menu-item" id="referralBtn">
+                <div class="menu-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="menu-text">Referral</div>
+            </button>
+        </div>
+    </div>
+
+    <div class="connections-list">
+        <div class="section-title">Connected Wallets</div>
+        <div class="task-item">
+            <div class="task-checkbox" id="mmConnected">
+                <i class="fas fa-plus"></i>
+            </div>
+            <div class="task-info">
+                <div class="task-name">MetaMask</div>
+                <div class="task-reward">Not connected</div>
+            </div>
+            <button class="task-connect" id="connectMMBtn">Connect</button>
+        </div>
+        <div class="task-item">
+            <div class="task-checkbox" id="tgConnected">
+                <i class="fas fa-plus"></i>
+            </div>
+            <div class="task-info">
+                <div class="task-name">Telegram Wallet</div>
+                <div class="task-reward">Not connected</div>
+            </div>
+            <button class="task-connect" id="connectTGBtn">Connect</button>
+        </div>
+    </div>
+
+    <div style="padding: 0 20px 120px;">
+        <button class="claim-btn" id="logoutBtn">Logout</button>
+    </div>
+</div>
+<div class="bottom" id="bottomNav">
+    <button class="nav active" data-nav="wallet">
+        <div class="nav-icon">
+            <i class="fas fa-wallet"></i>
+        </div>
+        <span>Wallet</span>
+    </button>
+    <button class="nav" data-nav="airdrop">
+        <div class="nav-icon">
+            <i class="fas fa-gift"></i>
+        </div>
+        <span>Airdrops</span>
+    </button>
+    <button class="nav" data-nav="staking">
+        <div class="nav-icon">
+            <i class="fas fa-chart-line"></i>
+        </div>
+        <span>Staking</span>
+    </button>
+    <button class="nav" data-nav="p2p">
+        <div class="nav-icon">
+            <i class="fas fa-exchange-alt"></i>
+        </div>
+        <span>P2P</span>
+    </button>
+    <button class="nav" data-nav="profile">
+        <div class="nav-icon">
+            <i class="fas fa-user"></i>
+        </div>
+        <span>Profile</span>
+    </button>
+</div>
+</div>

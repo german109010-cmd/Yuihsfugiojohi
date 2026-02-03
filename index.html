@@ -1,0 +1,60 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vault</title>
+    <meta name="theme-color" content="#000000">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- QR code lib -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+</head>
+<body>
+    <!-- Здесь будут подгружаться страницы -->
+    <div id="app"></div>
+
+    <!-- JS модули (ВАЖЕН ПОРЯДОК) -->
+<!-- В существующем списке добавьте init.js -->
+<script src="firebase.js"></script>
+<script src="router.js"></script>
+<script src="vaultapp.js"></script>
+<script src="init.js"></script>  <!-- ДОБАВЬТЕ ЭТУ СТРОЧКУ -->
+<script src="auth.js"></script>
+<script src="airdrop.js"></script>
+<script src="qr.js"></script>
+<script src="app.js"></script>
+
+    <!-- Стартовая страница -->
+<!-- ВСТАВЬТЕ ЭТОТ БЛОК вместо удаленного -->
+<script>
+    // Ждем полной загрузки всех скриптов
+    document.addEventListener('DOMContentLoaded', function() {
+        // Проверяем, все ли скрипты загрузились
+        if (typeof firebase !== 'undefined' && typeof Router !== 'undefined') {
+            // Начинаем с auth страницы
+            Router.load('auth');
+        } else {
+            // Если что-то не загрузилось, пробуем через 1 секунду
+            setTimeout(function() {
+                if (typeof firebase !== 'undefined' && typeof Router !== 'undefined') {
+                    Router.load('auth');
+                } else {
+                    alert('Ошибка загрузки приложения. Обновите страницу.');
+                }
+            }, 1000);
+        }
+    });
+</script>
+</body>
+</html>
